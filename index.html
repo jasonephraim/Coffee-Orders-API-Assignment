@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="/img/coffee-logo.png"
+            width="25"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          Coffee Orders
+        </a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <!--Add new orders-->
+        <div class="col-lg-6 mb-3 p-3">
+          <h1>Create New Order</h1>
+          <form>
+            <div class="form-group">
+              <label for="userEmail">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="userEmail"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="userOrder">Order</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userOrder"
+                placeholder="Order"
+              />
+            </div>
+            <button
+              type="submit"
+              id="enterButton"
+              class="btn btn-outline-secondary"
+              onclick="submission"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+        <!--End add new orders-->
+        <!--Delete current orders-->
+        <div class="col-lg-6 mb-3 p-3">
+          <h1>Delete Existing Order</h1>
+          <form>
+            <div class="form-group">
+              <label for="userEmail">Email address</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="userEmailDelete"
+                aria-describedby="emailHelp"
+                placeholder="Enter email"
+                data-fv-emailaddress-message="This is not a valid email"
+                required="required"
+              />
+            </div>
+            <button
+              type="submit"
+              id="deleteButton"
+              class="btn btn-outline-secondary"
+              onclick="submission"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--End delete current orders-->
+
+    <!--Current orders list-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-3 border">
+          <h1>Current Orders</h1>
+          <ul class="list-group" id="ordersList"></ul>
+        </div>
+      </div>
+    </div>
+    <!--End current orders list-->
+    <!--scripts-->
+    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write(
+          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
+        );
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-XXXXX-Y", "auto");
+      ga("set", "transport", "beacon");
+      ga("send", "pageview");
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </body>
+</html>
