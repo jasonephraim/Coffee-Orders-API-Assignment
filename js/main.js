@@ -12,11 +12,11 @@ let request = new XMLHttpRequest();
 request.onload = function (result) {
   console.log(this);
   let orders = Object.values(JSON.parse(this.responseText));
-  let order = orders.map((info) => {
+  let order = orders.map((order) => {
     return `<li class="list-group-item">
                 <div class="row">
                     <div class="col-10">
-                        <p>${info.emailAddress} ordered a ${info.coffee}</p>
+                        <p>${order.emailAddress} ordered a ${order.coffee}</p>
                     </div>
                     <div class="col-2">
                         <button
