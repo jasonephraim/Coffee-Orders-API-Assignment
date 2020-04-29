@@ -1,7 +1,9 @@
 // Define HTML elements
 let ordersList = document.getElementById("ordersList");
 let userEmail = document.getElementById("userEmail");
-let userEmailDelete = document.getElementById("userEmailDelete");
+let userEmailDelete = document
+  .getElementById("deleteButton")
+  .getAttribute("emailToDelete"); //not sure this is the place to declare the custom attribute?>
 let userOrder = document.getElementById("userOrder");
 let enterButton = document.getElementById("enterButton");
 let deleteButton = document.getElementById("deleteButton");
@@ -21,6 +23,7 @@ request.onload = function (result) {
                     <div class="col-2">
                         <button
                         type="submit"
+                        emailToDelete="${order.emailAddress}"
                         id="deleteButton"
                         class="btn btn-outline-danger btn-sm float-right"
                         onclick="submission"
